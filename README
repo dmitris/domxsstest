@@ -1,2 +1,2 @@
-DOMXSStest is a set of cases displaying DOM XSS vulnerabilities.  They can be used to test DOM XSS detection tools or browser controls (such as Webkit/Blink's XSSAuditor), for trainings etc.  The pages are available at <A href="http://dmitris.github.io/domxsstest/index.html">http://dmitris.github.io/domxsstest/index.html</A>.
+DOMXSStest is a set of cases displaying DOM XSS vulnerabilities.  They can be used to test DOM XSS detection tools or browser controls (such as Webkit/Blink's XSSAuditor), for trainings etc.  The pages are available at http://dmitris.github.io/domxsstest/index.html
 
