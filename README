@@ -1,2 +1,8 @@
 DOMXSStest is a set of cases displaying DOM XSS vulnerabilities.  They can be used to test DOM XSS detection tools or browser controls (such as Webkit/Blink's XSSAuditor), for trainings etc.  The pages are available at http://dmitris.github.io/domxsstest/index.html
 
+References:
+
+OWASP "DOM Based XSS" - https://www.owasp.org/index.php/DOM_Based_XSS
+OWASP DOM XSS Prevention Cheatsheet - https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet
+domxsswiki - http://code.google.com/p/domxsswiki/
+
