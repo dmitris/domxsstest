@@ -1,1 +1,2 @@
-DOM XSS test files 
+DOMXSStest is a set of cases displaying DOM XSS vulnerabilities.  They can be used to test DOM XSS detection tools or browser controls (such as Webkit/Blink's XSSAuditor), for trainings etc.
+
