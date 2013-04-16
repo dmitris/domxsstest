@@ -1,0 +1,13 @@
+<!doctype html>
+<html><head><title>YUI DOM XSS example</title></head>
+<body>
+<script src="http://yui.yahooapis.com/3.9.1/build/yui/yui-min.js"></script> 
+Hello!<BR>The data inside of foo div is: <div id='foo'>default foo</div> 
+<script>
+  YUI().use("console", "node", function(Y) {
+  var foo = Y.one("#foo");
+  foo.setHTML(document.location.hash); 
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<!doctype html>
+<html><head><title>YUI DOM XSS example</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script></head>
+<body>
+Hello!<BR>The inserted data is: 
+<script>
+$("body").append(document.location.hash);
+</script>
+</body>
+</html>
