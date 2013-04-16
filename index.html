@@ -1,1 +1,17 @@
-DOM XSS Test
+<!doctype html>
+<html>
+<head><title>DOM XSS Test Files</title></head>
+<body>
+<H1>DOM XSS test cases</H1> 
+<ul>
+<li>
+<A href="document_write_hash.html">document_write_hash.html</A> - document.write with unfiltered value of location.hash. Sample exploit: <A href="document_write_hash.html#&lt;img src=foo onerror=alert(123)&gt;">document_write_hash.html#&lt;img src=foo onerror=alert(123)&gt;</A>
+<li>
+<A href="innerhtml_hash.html">innerhtml_hash.html</A> - assignment from hash to innerHTML. Sample exploit: <A href="innerhtml_hash.html#&lt;img src=foo onerror=alert(123)&gt;">innerhtml_hash.html#&lt;img src=foo onerror=alert(123)&gt;</A>
+<li>
+<A href="yuinode_hash.html">yuinode_hash.html</A> - YUI's setHTML with location.hash. Sample exploit: <A href="yuinode_hash.html#&lt;img src=bla onerror=alert(123)&gt;">yuinode_hash.html#&lt;img src=bla onerror=alert(123)&gt;</A>
+<li>
+<A href="jquery_append_hash.html">jquery_append_hash.html</A> - jQuery append with hash. Sample exploit: <A href="jquery_append_hash.html#&lt;img src=foo onerror=alert(123)&gt;">jquery_append_hash.html#&lt;img src=foo onerror=alert(123)&gt;</A>
+</ul>
+</body>
+</html>
