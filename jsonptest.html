@@ -1,0 +1,39 @@
+<!doctype html>
+<html><head>
+
+<script src="http://yui.yahooapis.com/3.12.0/build/yui/yui-min.js"></script>
+<script>
+// Create a new YUI instance and populate it with the required modules.
+YUI().use('jsonp', 'jsonp-url', function (Y) {
+ // Our custom formatter will expect a URL with an additional placeholder for
+// username that must be supplied in send("bill");
+// e.g. http://example.com/bill/json?fn=YUI.Env.JSONP._12345
+function prepareJSONPUrl(url, proxy, username) {
+    return Y.Lang.sub(url, {
+        callback: proxy,
+        name: username || "user"
+    });
+}
+
+function handleJSONP(response) {
+    // response is a JavaScript object. No parsing necessary
+    Y.one("#output").setHTML(response.outputHTML);
+}
+
+var url = "http://example.com/{name}/service.php?callback={callback}";
+
+var service = new Y.JSONPRequest(url, {
+        format: prepareJSONPUrl,
+        on: {
+            success: handleJSONP
+        }
+    });
+
+service.send("dmitry");
+service.send(document.location.hash.substring(1));
+
+});
+</script></head>
+<body>
+  Hello, world!
+</body>
